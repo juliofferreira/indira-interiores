@@ -1,0 +1,15 @@
+@import url(./styles/home.css);
+
+:root {
+	--white: #ffffff;
+	--font: 'Cormorant Garamond', serif;
+}
+
+body {
+	background-image: url('./img/background-gradient.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: var(--font);
+	font-weight: 400;
+	font-size: 30px;
+}
