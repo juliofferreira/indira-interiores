@@ -1,0 +1,42 @@
+.about-me {
+	position: absolute;
+	width: 100vw;
+	height: 80vh;
+	left: 100vw;
+	top: 20vh;
+	background-color: var(--background-color);
+}
+
+.about-me__title {
+	color: var(--blue);
+	font-size: 55px;
+	font-weight: 700;
+	font-style: italic;
+	text-align: left;
+	letter-spacing: 5.5px;
+	text-transform: uppercase;
+}
+
+.about-me__text {
+	color: var(--black);
+	text-align: left;
+	font-size: 25px;
+}
+
+.about-me__button {
+	font-family: var(--font);
+	text-align: center;
+	font-size: 18px;
+	letter-spacing: 3.6px;
+	color: var(--blue);
+	text-transform: uppercase;
+	background-color: transparent;
+	border: 2px solid var(--blue);
+	padding: 1em;
+}
+
+.about-me__image {
+	width: 15%;
+	height: 15%;
+	text-align: left;
+}

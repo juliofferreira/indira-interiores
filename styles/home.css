@@ -1,9 +1,14 @@
 .home {
+	background-image: url('../img/background-gradient.png');
+	background-repeat: no-repeat;
+	background-size: cover;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
 	height: 100vh;
+	width: 100vw;
+	left: 0vw;
 }
 
 .main-title,
@@ -29,6 +34,7 @@
 .main-subtitle {
 	text-align: center;
 	width: 45%;
+	font-size: 30px;
 }
 
 .main-logo {
@@ -56,15 +62,6 @@
 	padding: 1.3em;
 }
 
-.rolldown-container {
-	align-self: flex-end;
-	display: flex;
-	border-bottom: 2px solid var(--white);
-	padding-right: 0;
-	justify-content: space-evenly;
-	margin-right: 1.6em;
-}
-
 .rolldown-button {
 	text-align: left;
 	font-weight: 400;
@@ -73,15 +70,15 @@
 	padding: 0;
 	border-bottom: 2px solid var(--white);
 	align-self: flex-end;
-	margin-right: 1.6em;
-	position: relative;
-	padding-right: 0.9em;
+	margin-right: 4em;
+	margin-bottom: 2.5em;
+	padding-bottom: 0.3em;
 }
 
 .down-arrow {
-	width: 10%;
+	width: 0.7em;
 	height: 0.9em;
-	position: absolute;
-	bottom: 0.1em;
-	margin-left: 0.2em;
+	display: inline-block;
+	margin-left: 0.1em;
+	vertical-align: bottom;
 }
