@@ -7,15 +7,24 @@
 	--black: #2a3840;
 	--background-color: #f9f6f2;
 	--font: 'Cormorant Garamond', serif;
+	--font-size-80px: 5rem;
+	--font-size-70px: 4.375rem;
+	--font-size-55px: 3.4375rem;
+	--font-size-25px: 1.5625rem;
+	--font-size-24px: 1.5rem;
+	--font-size-18px: 1.125rem;
+	--font-size-8px: 0.5rem;
+	--font-size-5-5px: 0.34375rem;
+	--font-size-3-6px: 0.225rem;
+	--font-size-2px: 0.125rem;
+}
+
+html {
+	font-size: 16px;
 }
 
 body {
 	font-family: var(--font);
-	font-weight: 400;
+	/* max-width: 100vw;
+	overflow: hidden; */
 }
-
-/* html,
-body {
-	max-width: 100vw;
-	overflow: hidden;
-} */
