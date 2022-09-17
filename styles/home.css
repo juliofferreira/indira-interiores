@@ -17,15 +17,15 @@
 }
 
 .strong-title {
-	font-size: var(--font-size-80px);
-	letter-spacing: var(--font-size-8px);
+	font-size: var(--80px);
+	letter-spacing: var(--8px);
 	text-transform: uppercase;
 	font-weight: bold;
 	font-style: italic;
 }
 
 .main-title {
-	font-size: var(--font-size-70px);
+	font-size: var(--70px);
 	font-weight: bold;
 	width: 45%;
 	text-align: center;
@@ -55,19 +55,19 @@
 .video-button {
 	text-align: center;
 	text-transform: uppercase;
-	font-weight: bold;
-	font-size: var(--font-size-18px);
-	letter-spacing: var(--font-size-3-6px);
-	border: var(--font-size-2px) solid var(--white);
+	font-weight: 700;
+	font-size: var(--18px);
+	letter-spacing: var(--3-6px);
+	border: var(--2px) solid var(--white);
 	padding: 1.3em;
 }
 
 .rolldown-button {
 	text-align: left;
-	font-size: var(--font-size-24px);
+	font-size: var(--24px);
 	border: none;
 	padding: 0;
-	border-bottom: var(--font-size-2px) solid var(--white);
+	border-bottom: var(--2px) solid var(--white);
 	align-self: flex-end;
 	margin-right: 4em;
 	margin-bottom: 2.5em;
