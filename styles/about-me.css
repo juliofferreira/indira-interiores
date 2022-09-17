@@ -1,10 +1,24 @@
 .about-me {
 	position: absolute;
 	width: 100vw;
-	height: 80vh;
+	height: 85vh;
 	left: 100vw;
-	top: 20vh;
-	background-color: var(--background-color);
+	top: 15vh;
+	background: url(../img/about-me-picture.jpg) no-repeat right,
+		url(../img/tree-picture.png) no-repeat left;
+	background-size: 32% 100%, 68% 100%;
+}
+.about-me__content {
+	width: 50%;
+	left: 14.55%;
+	position: absolute;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 1.2rem;
+	background-color: var(--background-color-opacity);
+	padding: 2rem;
+	overflow: hidden;
 }
 
 .about-me__title {
@@ -32,11 +46,11 @@
 	text-transform: uppercase;
 	background-color: transparent;
 	border: var(--font-size-2px) solid var(--blue);
-	padding: 1em;
+	padding: 1.4em 1em;
+	margin-top: 1em;
 }
 
 .about-me__image {
-	width: 15%;
-	height: 15%;
+	width: 6rem;
 	text-align: left;
 }
