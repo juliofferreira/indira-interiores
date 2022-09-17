@@ -16,17 +16,17 @@
 	color: var(--white);
 }
 
-.strong-title {
+.italic-title {
 	font-size: var(--80px);
 	letter-spacing: var(--8px);
 	text-transform: uppercase;
-	font-weight: bold;
+	font-weight: 700;
 	font-style: italic;
 }
 
 .main-title {
 	font-size: var(--70px);
-	font-weight: bold;
+	font-weight: 700;
 	width: 45%;
 	text-align: center;
 }

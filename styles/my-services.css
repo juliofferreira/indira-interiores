@@ -4,12 +4,12 @@
 	top: 15vh;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	width: 100vw;
-	background-color: red;
 	align-items: center;
 	gap: 6rem;
+	justify-content: center;
+	width: 100vw;
 	height: 85vh;
+	background-color: red;
 }
 
 .my-services button {

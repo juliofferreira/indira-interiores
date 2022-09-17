@@ -1,0 +1,60 @@
+.contact {
+	position: absolute;
+	left: 300vw;
+	top: 15vh;
+	width: 100vw;
+	height: 85vh;
+}
+
+.contact__content {
+	text-align: left;
+	position: absolute;
+	width: 50%;
+	left: 15%;
+	top: 15%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 3rem;
+}
+
+.contact h2 {
+	color: var(--blue);
+	font-size: var(--65px);
+	font-weight: 700;
+	line-height: var(--70px);
+	text-transform: uppercase;
+	width: 50%;
+}
+
+.contact button {
+	border-radius: 50%;
+	background-color: var(--blue);
+	border: var(--2px) solid var(--blue);
+	color: var(--white);
+	width: 4rem;
+	height: 4rem;
+}
+
+.contact__buttons {
+	display: flex;
+	gap: 3rem;
+}
+
+.contact__content p {
+	font-size: var(--25px);
+	line-height: var(--30px);
+	font-weight: 400;
+}
+
+.contact__content > h2 > em {
+	font-style: italic;
+	font-size: var(--55px);
+	letter-spacing: var(--5-5px);
+}
+
+.contact__content > hr {
+	border: 10px solid var(--black);
+	align-self: stretch;
+}
