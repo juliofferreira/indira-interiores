@@ -4,9 +4,7 @@
 	height: 85vh;
 	left: 100vw;
 	top: 15vh;
-	background: url(../img/about-me-picture.jpg) no-repeat right,
-		url(../img/tree-picture.png) no-repeat left;
-	background-size: 32% 100%, 68% 100%;
+	background: url(../img/tree-picture.png) no-repeat center / cover;
 }
 .about-me__content {
 	width: 50%;
