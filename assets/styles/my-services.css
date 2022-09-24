@@ -34,7 +34,7 @@
 	gap: 5rem;
 }
 
-.content-container__content {
+.my-services__content {
 	width: 29%;
 	display: flex;
 	flex-direction: column;
@@ -42,17 +42,25 @@
 	align-items: center;
 }
 
-.content-container__content img {
-	width: 5rem;
-}
-
-.content-container__content h2 {
+.my-services__content h2 {
 	font-size: var(--50px);
 	line-height: var(--50px);
 	font-weight: 700;
 }
 
-.content-container__content p {
+.my-services__content p {
 	font-size: var(--25px);
 	line-height: var(--30px);
+}
+
+.my-services__image-architecture {
+	background: url(../img/architecture.svg) no-repeat center;
+	width: 100px;
+	height: 100px;
+}
+
+.my-services__image-feng-shui {
+	background: url(../img/balance.svg) no-repeat center;
+	width: 100px;
+	height: 100px;
 }

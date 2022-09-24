@@ -44,6 +44,7 @@
 	letter-spacing: var(--3-6px);
 	color: var(--blue);
 	text-transform: uppercase;
+	font-weight: 700;
 	background-color: transparent;
 	border: var(--2px) solid var(--blue);
 	padding: 1.4em 1em;
@@ -51,6 +52,7 @@
 }
 
 .about-me__image {
-	width: 6rem;
-	text-align: left;
+	background: url(../img/eye.svg) no-repeat center;
+	width: 100px;
+	height: 65px;
 }
