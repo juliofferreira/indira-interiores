@@ -1,8 +1,9 @@
-@import url(./styles/home.css);
-@import url(./styles/about-me.css);
-@import url(./styles/my-services.css);
-@import url(./styles/contact.css);
-@import url(./styles/faq.css);
+@import url(./assets/styles/header.css);
+@import url(./assets/styles/home.css);
+@import url(./assets/styles/about-me.css);
+@import url(./assets/styles/my-services.css);
+@import url(./assets/styles/contact.css);
+@import url(./assets/styles/faq.css);
 
 :root {
 	--white: #ffffff;
@@ -17,12 +18,14 @@
 	--55px: 3.4375rem;
 	--50px: 3.125rem;
 	--30px: 1.875rem;
+	--29px: 1.8125rem;
 	--25px: 1.5625rem;
 	--24px: 1.5rem;
 	--22px: 1.375rem;
 	--18px: 1.125rem;
 	--8px: 0.5rem;
 	--5-5px: 0.34375rem;
+	--4-8px: 0.3rem;
 	--3-6px: 0.225rem;
 	--2px: 0.125rem;
 }

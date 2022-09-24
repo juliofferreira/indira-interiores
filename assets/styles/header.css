@@ -1,0 +1,31 @@
+.header {
+	position: absolute;
+	top: 0;
+	left: 100vw;
+	height: 15vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	gap: 8rem;
+	background-color: var(--background-color);
+}
+
+.header__list {
+	display: flex;
+	gap: 4rem;
+}
+
+.header__list-link {
+	text-decoration: none;
+	color: var(--black);
+	font-size: var(--24px);
+	text-transform: uppercase;
+	font-weight: 700;
+	line-height: var(--29px);
+	letter-spacing: var(--4-8px);
+}
+
+.header__logo {
+	width: 20rem;
+	margin-left: 8rem;
+}

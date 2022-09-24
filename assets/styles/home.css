@@ -1,0 +1,81 @@
+.home {
+	background-image: url('../img/background-gradient.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	height: 100vh;
+	width: 100vw;
+	left: 0vw;
+}
+
+.home__title,
+.home__subtitle {
+	color: var(--white);
+}
+
+.home__italic-title {
+	font-size: var(--80px);
+	letter-spacing: var(--8px);
+	text-transform: uppercase;
+	font-weight: 700;
+	font-style: italic;
+}
+
+.home__title {
+	font-size: var(--70px);
+	font-weight: 700;
+	text-align: center;
+}
+
+.home__subtitle {
+	text-align: center;
+	width: 45%;
+	font-size: 30px;
+}
+
+.home__logo {
+	width: 25%;
+}
+
+.home__tagline {
+	width: 18%;
+}
+
+.home__rolldown-button,
+.home__video-button {
+	background-color: transparent;
+	font-family: var(--font);
+	color: var(--white);
+}
+
+.home__video-button {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: var(--18px);
+	letter-spacing: var(--3-6px);
+	border: var(--2px) solid var(--white);
+	padding: 1.3em;
+}
+
+.home__rolldown-button {
+	text-align: left;
+	font-size: var(--24px);
+	border: none;
+	padding: 0;
+	border-bottom: var(--2px) solid var(--white);
+	align-self: flex-end;
+	margin-right: 4em;
+	margin-bottom: 2.5em;
+	padding-bottom: 0.3em;
+}
+
+.home__rolldown-button::after {
+	content: url('../img/down-arrow.svg');
+	display: inline-block;
+	width: 1rem;
+	margin-left: 0.5rem;
+}
