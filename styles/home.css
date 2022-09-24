@@ -27,7 +27,7 @@
 .home__title {
 	font-size: var(--70px);
 	font-weight: 700;
-	width: 45%;
+	width: 50%;
 	text-align: center;
 }
 
@@ -74,10 +74,9 @@
 	padding-bottom: 0.3em;
 }
 
-.home__down-arrow {
-	width: 0.7em;
-	height: 0.9em;
+.home__rolldown-button::after {
+	content: url('../img/down-arrow.svg');
 	display: inline-block;
-	margin-left: 0.1em;
-	vertical-align: bottom;
+	width: 1rem;
+	margin-left: 0.5rem;
 }
