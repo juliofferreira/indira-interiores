@@ -84,12 +84,12 @@
 }
 
 .contact__social--whatsapp {
-	background: url(../img/whatsapp.svg) no-repeat center var(--blue);
+	background: url('../img/whatsapp.svg') no-repeat center var(--blue);
 	background-size: 2.5rem;
 }
 
 .contact__social--youtube {
-	background: url(../img/youtube.svg) no-repeat center var(--blue);
+	background: url('../img/youtube.svg') no-repeat center var(--blue);
 	background-size: 3.3rem;
 }
 

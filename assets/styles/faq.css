@@ -1,5 +1,82 @@
 .faq {
 	position: absolute;
 	left: 400vw;
-	top: 15vh;
+	top: 0vh;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	overflow: hidden;
+}
+
+.faq::before {
+	content: '';
+	width: 100vw;
+	height: 100vh;
+	background: url('../img/faq-background.jpg') no-repeat center / cover;
+	position: absolute;
+	z-index: -1;
+}
+
+.faq__container {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	height: 85%;
+	padding: 0 1.5rem 0 3rem;
+	margin-top: 15vh;
+}
+
+.faq details > summary {
+	font-size: var(--30px);
+	color: var(--white);
+	text-align: left;
+	line-height: var(--35px);
+	font-weight: 700;
+	list-style: none;
+	border-bottom: 1px solid var(--white);
+	cursor: pointer;
+	padding: 2rem 0;
+}
+
+.faq details:last-child > summary {
+	border-bottom: none;
+}
+
+.faq details > summary::before {
+	content: '';
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	padding-right: 3rem;
+	background: url('../img/plus.svg') no-repeat center / contain;
+}
+
+.faq details[open] > p {
+	border-bottom: 1px solid var(--white);
+	padding: 2rem;
+}
+
+.faq details:last-child[open] > p {
+	border-bottom: none;
+}
+
+.faq details[open] > summary {
+	border-bottom: none;
+}
+
+.faq details[open] > summary::before {
+	content: '';
+	display: inline-block;
+	width: 1.3rem;
+	height: 1.3rem;
+	padding-right: 3rem;
+	background: url('../img/triangle.svg') no-repeat center / contain;
+}
+
+.faq details > p {
+	text-align: left;
+	font-size: var(--25px);
+	line-height: var(--30px);
+	font-weight: 400;
+	color: var(--white);
 }
