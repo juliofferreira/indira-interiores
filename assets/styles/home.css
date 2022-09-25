@@ -8,7 +8,18 @@
 	justify-content: space-around;
 	height: 100vh;
 	width: 100vw;
-	left: 0vw;
+	left: 0;
+	top: 0;
+	position: absolute;
+}
+
+.home__video {
+	min-width: 100vw;
+	min-height: 100vh;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
 }
 
 .home__title,

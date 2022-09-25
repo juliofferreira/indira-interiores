@@ -9,7 +9,24 @@
 	justify-content: center;
 	width: 100vw;
 	height: 85vh;
-	background-color: red;
+}
+
+.my-services::before {
+	content: '';
+	width: 100vw;
+	height: 100vh;
+	background: url('../img/background-gradient.png') no-repeat;
+	position: absolute;
+	top: -15vh;
+	z-index: -1;
+}
+
+.my-services__video {
+	min-width: 100vw;
+	min-height: 100vh;
+	position: absolute;
+	top: -15vh;
+	z-index: -2;
 }
 
 .my-services button {
