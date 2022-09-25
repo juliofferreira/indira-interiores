@@ -71,13 +71,13 @@
 }
 
 .my-services__image-architecture {
-	background: url(../img/architecture.svg) no-repeat center;
+	background: url('../img/architecture.svg') no-repeat center;
 	width: 100px;
 	height: 100px;
 }
 
 .my-services__image-feng-shui {
-	background: url(../img/balance.svg) no-repeat center;
+	background: url('../img/balance.svg') no-repeat center;
 	width: 100px;
 	height: 100px;
 }
