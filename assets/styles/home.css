@@ -6,17 +6,15 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
+	position: relative;
 	height: 100vh;
 	width: 100vw;
-	left: 0;
-	top: 0;
-	position: absolute;
 	padding: auto 3rem;
 }
 
 .home__video {
-	min-width: 100vw;
 	min-height: 100vh;
+	min-width: 100vw;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -30,10 +28,10 @@
 
 .home__italic-title {
 	font-size: var(--80px);
+	font-style: italic;
+	font-weight: 700;
 	letter-spacing: var(--8px);
 	text-transform: uppercase;
-	font-weight: 700;
-	font-style: italic;
 }
 
 .home__title {
@@ -43,9 +41,9 @@
 }
 
 .home__subtitle {
+	font-size: 30px;
 	text-align: center;
 	width: 45%;
-	font-size: 30px;
 }
 
 .home__logo {
@@ -59,35 +57,35 @@
 .home__rolldown-button,
 .home__video-button {
 	background-color: transparent;
-	font-family: var(--font);
 	color: var(--white);
+	font-family: var(--font);
 }
 
 .home__video-button {
+	border: var(--2px) solid var(--white);
+	font-size: var(--18px);
+	font-weight: 700;
+	letter-spacing: var(--3-6px);
+	padding: 1.3em;
 	text-align: center;
 	text-transform: uppercase;
-	font-weight: 700;
-	font-size: var(--18px);
-	letter-spacing: var(--3-6px);
-	border: var(--2px) solid var(--white);
-	padding: 1.3em;
 }
 
 .home__rolldown-button {
-	text-align: left;
-	font-size: var(--24px);
-	border: none;
-	padding: 0;
-	border-bottom: var(--2px) solid var(--white);
 	align-self: flex-end;
-	margin-right: 4em;
+	border: none;
+	border-bottom: var(--2px) solid var(--white);
+	font-size: var(--24px);
 	margin-bottom: 2.5em;
+	margin-right: 4em;
+	padding: 0;
 	padding-bottom: 0.3em;
+	text-align: left;
 }
 
 .home__rolldown-button::after {
 	content: url('../img/down-arrow.svg');
 	display: inline-block;
-	width: 1rem;
 	margin-left: 0.5rem;
+	width: 1rem;
 }

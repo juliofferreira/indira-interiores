@@ -1,29 +1,27 @@
 .my-services {
-	position: absolute;
-	left: 200vw;
-	top: 15vh;
 	display: flex;
-	flex-direction: column;
 	align-items: center;
+	flex-direction: column;
 	gap: 6rem;
 	justify-content: center;
-	width: 100vw;
+	position: relative;
 	height: 85vh;
+	width: 100vw;
 }
 
 .my-services::before {
 	content: '';
-	width: 100vw;
-	height: 100vh;
 	background: url('../img/background-gradient.png') no-repeat;
 	position: absolute;
 	top: -15vh;
+	height: 100vh;
+	width: 100vw;
 	z-index: -1;
 }
 
 .my-services__video {
-	min-width: 100vw;
 	min-height: 100vh;
+	min-width: 100vw;
 	position: absolute;
 	top: -15vh;
 	z-index: -2;
@@ -31,38 +29,38 @@
 
 .my-services button {
 	background-color: transparent;
-	font-family: var(--font);
-	color: var(--white);
 	border: var(--2px) solid var(--white);
-	font-weight: 700;
-	text-transform: uppercase;
+	color: var(--white);
+	font-family: var(--font);
 	font-size: var(--18px);
-	line-height: var(--22px);
+	font-weight: 700;
 	letter-spacing: var(--3-6px);
-	width: 20rem;
+	line-height: var(--22px);
+	text-transform: uppercase;
 	height: 5rem;
+	width: 20rem;
 }
 
 .my-services__content-container {
-	display: flex;
-	text-align: center;
 	color: var(--white);
-	justify-content: center;
+	display: flex;
 	gap: 5rem;
+	justify-content: center;
+	text-align: center;
 }
 
 .my-services__content {
-	width: 29%;
 	display: flex;
+	align-items: center;
 	flex-direction: column;
 	gap: 2rem;
-	align-items: center;
+	width: 29%;
 }
 
 .my-services__content h2 {
 	font-size: var(--50px);
-	line-height: var(--50px);
 	font-weight: 700;
+	line-height: var(--50px);
 }
 
 .my-services__content p {
@@ -72,12 +70,12 @@
 
 .my-services__image-architecture {
 	background: url('../img/architecture.svg') no-repeat center;
-	width: 100px;
 	height: 100px;
+	width: 100px;
 }
 
 .my-services__image-feng-shui {
 	background: url('../img/balance.svg') no-repeat center;
-	width: 100px;
 	height: 100px;
+	width: 100px;
 }

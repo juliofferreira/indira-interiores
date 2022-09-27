@@ -1,41 +1,37 @@
 .faq {
-	position: absolute;
-	left: 400vw;
-	top: 0vh;
-	width: 100vw;
-	height: 100vh;
 	display: flex;
-	overflow: hidden;
+	height: 100vh;
+	width: 100vw;
 }
 
 .faq::before {
 	content: '';
-	width: 100vw;
-	height: 100vh;
 	background: url('../img/faq-background.jpg') no-repeat center / cover;
 	position: absolute;
+	height: 100vh;
+	width: 100vw;
 	z-index: -1;
 }
 
 .faq__container {
 	display: flex;
 	flex-direction: column;
-	width: 50%;
-	height: 85%;
-	padding: 0 1.5rem 0 3rem;
 	margin-top: 15vh;
+	padding: 0 1.5rem 0 3rem;
+	height: 85%;
+	width: 50%;
 }
 
 .faq details > summary {
-	font-size: var(--30px);
 	color: var(--white);
-	text-align: left;
-	line-height: var(--35px);
-	font-weight: 700;
-	list-style: none;
 	border-bottom: 1px solid var(--white);
 	cursor: pointer;
+	list-style: none;
+	font-size: var(--30px);
+	font-weight: 700;
+	line-height: var(--35px);
 	padding: 2rem 0;
+	text-align: left;
 }
 
 .faq details:last-child > summary {
@@ -44,11 +40,11 @@
 
 .faq details > summary::before {
 	content: '';
-	display: inline-block;
-	width: 1.5rem;
-	height: 1.5rem;
-	padding-right: 3rem;
 	background: url('../img/plus.svg') no-repeat center / contain;
+	display: inline-block;
+	padding-right: 3rem;
+	height: 1.5rem;
+	width: 1.5rem;
 }
 
 .faq details[open] > p {
@@ -66,17 +62,17 @@
 
 .faq details[open] > summary::before {
 	content: '';
-	display: inline-block;
-	width: 1.3rem;
-	height: 1.3rem;
-	padding-right: 3rem;
 	background: url('../img/triangle.svg') no-repeat center / contain;
+	display: inline-block;
+	padding-right: 3rem;
+	height: 1.3rem;
+	width: 1.3rem;
 }
 
 .faq details > p {
-	text-align: left;
-	font-size: var(--25px);
-	line-height: var(--30px);
-	font-weight: 400;
 	color: var(--white);
+	font-size: var(--25px);
+	font-weight: 400;
+	line-height: var(--30px);
+	text-align: left;
 }
