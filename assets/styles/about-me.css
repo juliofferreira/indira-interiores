@@ -1,56 +1,56 @@
 .about-me {
-	position: absolute;
+	background: url('../img/tree-picture.png') no-repeat center / cover;
+	position: relative;
 	width: 100vw;
 	height: 85vh;
-	left: 100vw;
-	top: 15vh;
-	background: url('../img/tree-picture.png') no-repeat center / cover;
 }
+
 .about-me__content {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1.2rem;
+	position: absolute;
 	width: 50%;
 	left: 14.55%;
-	position: absolute;
-	display: flex;
-	align-items: flex-start;
-	flex-direction: column;
-	gap: 1.2rem;
-	background-color: var(--background-color-opacity);
 	padding: 2rem;
+	background-color: var(--background-color-opacity);
 	overflow: hidden;
 }
 
 .about-me__title {
 	color: var(--blue);
 	font-size: var(--55px);
-	font-weight: bold;
 	font-style: italic;
-	text-align: left;
+	font-weight: bold;
 	letter-spacing: var(--5-5px);
+	text-align: left;
 	text-transform: uppercase;
 }
 
 .about-me__text {
 	color: var(--black);
-	text-align: left;
 	font-size: var(--25px);
+	text-align: left;
 }
 
 .about-me__button {
-	font-family: var(--font);
-	text-align: center;
-	font-size: var(--18px);
-	letter-spacing: var(--3-6px);
-	color: var(--blue);
-	text-transform: uppercase;
-	font-weight: 700;
 	background-color: transparent;
 	border: var(--2px) solid var(--blue);
-	padding: 1.4em 1em;
+	color: var(--blue);
+	cursor: pointer;
+	font-family: var(--font);
+	font-size: var(--18px);
+	font-weight: 700;
+	letter-spacing: var(--3-6px);
 	margin-top: 1em;
+	padding: 1.4em 1em;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 .about-me__image {
 	background: url('../img/eye.svg') no-repeat center;
-	width: 100px;
 	height: 65px;
+	width: 100px;
 }

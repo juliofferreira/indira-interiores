@@ -1,38 +1,36 @@
 .contact {
-	position: absolute;
-	left: 300vw;
-	top: 15vh;
+	background: url(../img/tree-picture.png) no-repeat center / cover;
+	position: relative;
 	width: 100vw;
 	height: 85vh;
-	background: url(../img/tree-picture.png) no-repeat center / cover;
 }
 
 .contact__content {
+	background-color: var(--background-color-opacity);
 	text-align: left;
 	position: absolute;
 	width: 50%;
 	left: 15%;
+	padding: 2rem 3rem;
 	display: flex;
-	flex-direction: column;
 	align-items: flex-start;
+	flex-direction: column;
 	justify-content: center;
 	gap: 3rem;
-	background-color: var(--background-color-opacity);
-	padding: 2rem 3rem;
 }
 
 .contact__content p,
 .contact__content address,
 .contact__content span {
-	font-size: var(--25px);
-	line-height: var(--30px);
-	font-weight: 400;
 	color: var(--black);
+	font-size: var(--25px);
+	font-weight: 400;
+	line-height: var(--30px);
 }
 
 .contact__content > h2 > em {
-	font-style: italic;
 	font-size: var(--55px);
+	font-style: italic;
 	letter-spacing: var(--5-5px);
 }
 
@@ -45,29 +43,29 @@
 }
 
 .contact__socials {
-	display: flex;
-	gap: 3rem;
-	width: 100%;
 	border-bottom: 1px solid #cccccc;
 	padding-bottom: 3.5rem;
+	width: 100%;
+	display: flex;
+	gap: 3rem;
 }
 
 .contact__social,
 .contact__social-secondary {
-	border-radius: 50%;
 	border: var(--2px) solid var(--blue);
+	border-radius: 50%;
 	text-indent: -9999px;
 }
 
 .contact__social {
-	width: 4rem;
-	height: 4rem;
 	background-size: 3rem;
+	height: 4rem;
+	width: 4rem;
 }
 
 .contact__social-secondary {
-	width: 3rem;
 	height: 3rem;
+	width: 3rem;
 }
 
 .contact__social--instagram,

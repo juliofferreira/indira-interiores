@@ -3,7 +3,18 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Consultoria em medicina do habitat. Utilizando a arquitetura e a medicina chinesa, sua casa pode se tornar uma poderosa ferramenta em benefício à sua saúde."
+		/>
+		<title>Indira Interiores Casa & Saúde - Arquitetura e Bem-Estar</title>
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="./assets/img/small-logo-blue.svg"
+		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -12,33 +23,42 @@
 		/>
 		<link rel="stylesheet" href="./assets/styles/reset.css" />
 		<link rel="stylesheet" href="./styles.css" />
-		<title>Indira Interiores</title>
+		<script src="./main.js" defer></script>
 	</head>
 	<body>
 		<header class="header">
-			<img
-				src="./assets/img/main-logo-blue.svg"
-				alt="Logo Indira Interiores Casa & Saúde"
-				class="header__logo"
-			/>
+			<div>
+				<img
+					src="./assets/img/main-logo-blue.svg"
+					alt="Logo Indira Interiores Casa & Saúde"
+					class="header__logo header__logo--blue"
+				/>
+				<img
+					src="./assets//img//main-logo-white.svg"
+					alt="Logo Indira Interiores Casa & Saúde"
+					class="header__logo header__logo--white"
+				/>
+			</div>
 			<nav class="header__nav">
 				<ul class="header__list">
 					<li class="header__list-item">
-						<a href="#" class="header__list-link">Sobre mim</a>
+						<button class="header__list-button" id="about-me">Sobre mim</button>
 					</li>
 					<li class="header__list-item">
-						<a href="#" class="header__list-link">Meus serviços</a>
+						<button class="header__list-button" id="my-services">
+							Meus serviços
+						</button>
 					</li>
 					<li class="header__list-item">
-						<a href="#" class="header__list-link">Contato</a>
+						<button class="header__list-button" id="contact">Contato</button>
 					</li>
 					<li class="header__list-item">
-						<a href="#" class="header__list-link">Dúvidas</a>
+						<button class="header__list-button" id="faq">Dúvidas</button>
 					</li>
 				</ul>
 			</nav>
 		</header>
-		<main>
+		<main class="main">
 			<section class="home">
 				<video autoplay muted loop class="home__video">
 					<source src="./assets/video/home.mp4" type="video/mp4" />
@@ -62,7 +82,7 @@
 				</button>
 				<img
 					src="./assets/img/tagline-white.svg"
-					alt="Tagline Casa & Saúde"
+					alt="Logo Escrito Casa & Saúde"
 					class="home__tagline"
 				/>
 				<button class="home__rolldown-button">Role Para Baixo</button>
