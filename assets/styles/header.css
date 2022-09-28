@@ -1,13 +1,15 @@
 .header {
 	background-color: var(--background-color);
 	position: absolute;
-	top: 0;
-	left: 100vw;
+	top: -15vh;
+	left: 0;
 	height: 15vh;
 	width: 100vw;
 	display: flex;
 	align-items: center;
 	gap: 8rem;
+	transition: 1s;
+	z-index: 1;
 }
 
 .header__list {
@@ -15,17 +17,32 @@
 	gap: 4rem;
 }
 
-.header__list-link {
+.header__list-button {
+	background-color: transparent;
+	border: none;
 	color: var(--black);
+	cursor: pointer;
+	font-family: var(--font);
 	font-size: var(--24px);
 	font-weight: 700;
 	letter-spacing: var(--4-8px);
 	line-height: var(--29px);
+	padding: 0;
 	text-decoration: none;
 	text-transform: uppercase;
+	transition: 1s;
 }
 
 .header__logo {
+	cursor: pointer;
 	margin-left: 8rem;
 	width: 20rem;
+}
+
+.header__logo--white {
+	display: none;
+}
+
+.header__logo--blue {
+	display: block;
 }

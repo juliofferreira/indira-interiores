@@ -63,6 +63,7 @@
 
 .home__video-button {
 	border: var(--2px) solid var(--white);
+	cursor: pointer;
 	font-size: var(--18px);
 	font-weight: 700;
 	letter-spacing: var(--3-6px);
@@ -75,6 +76,7 @@
 	align-self: flex-end;
 	border: none;
 	border-bottom: var(--2px) solid var(--white);
+	cursor: pointer;
 	font-size: var(--24px);
 	margin-bottom: 2.5em;
 	margin-right: 4em;

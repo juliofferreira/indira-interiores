@@ -38,6 +38,7 @@
 	background-color: transparent;
 	border: var(--2px) solid var(--blue);
 	color: var(--blue);
+	cursor: pointer;
 	font-family: var(--font);
 	font-size: var(--18px);
 	font-weight: 700;
