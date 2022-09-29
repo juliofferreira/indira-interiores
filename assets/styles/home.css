@@ -54,7 +54,7 @@
 	width: 18%;
 }
 
-.home__rolldown-button,
+.home__roll-down-button,
 .home__video-button {
 	background-color: transparent;
 	color: var(--white);
@@ -85,7 +85,7 @@
 	text-align: left;
 }
 
-.home__rolldown-button::after {
+.home__roll-down-button::after {
 	content: url('../img/down-arrow.svg');
 	display: inline-block;
 	margin-left: 0.5rem;

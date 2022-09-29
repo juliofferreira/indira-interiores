@@ -22,6 +22,10 @@
 	width: 50%;
 }
 
+.faq details {
+	transition: 1s;
+}
+
 .faq details > summary {
 	color: var(--white);
 	border-bottom: 1px solid var(--white);
@@ -49,7 +53,7 @@
 
 .faq details[open] > p {
 	border-bottom: 1px solid var(--white);
-	padding: 2rem;
+	padding: 0 2rem 2rem;
 }
 
 .faq details:last-child[open] > p {
@@ -58,6 +62,21 @@
 
 .faq details[open] > summary {
 	border-bottom: none;
+}
+
+.faq details[open] summary ~ * {
+	animation: sweep 0.5s ease-in-out;
+}
+
+@keyframes sweep {
+	0% {
+		opacity: 0;
+		margin-left: -10px;
+	}
+	100% {
+		opacity: 1;
+		margin-left: 0px;
+	}
 }
 
 .faq details[open] > summary::before {
