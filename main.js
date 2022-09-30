@@ -4,9 +4,8 @@ const homeRollDownButton = document.querySelector('.home__roll-down-button');
 const mainContent = document.querySelector('.main');
 const header = document.querySelector('.header');
 const headerLogos = document.querySelectorAll('.header__logo');
-const headerLogoBlue = document.querySelector('.header__logo--blue');
-const headerLogoWhite = document.querySelector('.header__logo--white');
 const headerButtons = document.querySelectorAll('.header__list-button');
+const faqQuestions = document.querySelectorAll('.faq__question');
 
 const handleActiveClass = (element) => {
 	headerButtons.forEach((button) => {
@@ -15,88 +14,90 @@ const handleActiveClass = (element) => {
 	element.classList.add('active');
 };
 
+//FIXME: WEIRD CHANGE OF CLASSNAME
+const moveMainContent = (section) => {
+	mainContent.className = `${
+		mainContent.className.split(' ')[0]
+	} main--${section}`;
+};
+
+const moveHeader = () => {
+	header.classList.toggle('header--down');
+};
+
+const changeHeaderColor = (color) => {
+	//FIXME: ACCESSING CLASS BY INDEX IS BAD
+	if (
+		(color === 'light' && headerLogos[0].classList[1]) ||
+		(color === 'dark' && headerLogos[1].classList[1])
+	) {
+		return;
+	}
+
+	headerLogos.forEach((logo) => {
+		logo.classList.toggle('header__logo--inactive');
+	});
+	headerButtons.forEach((button) => {
+		button.classList.toggle('header__list-button--light');
+	});
+};
+
 const moveToHome = () => {
-	mainContent.style.left = '0';
-	header.style.top = '-15vh';
+	moveMainContent('home');
 };
 
 const moveToAboutMe = () => {
-	mainContent.style.left = '-100vw';
-	header.style.top = '0';
+	moveMainContent('about-me');
+	changeHeaderColor('dark');
 	handleActiveClass(headerButtons[0]);
-	headerLogoWhite.style.display = 'none';
-	headerLogoBlue.style.display = 'block';
-	headerButtons.forEach((button) => {
-		button.style.color = '#2a3840';
-		button.style.borderBottomColor = '#2a3840';
-	});
 };
 
 const moveToMyServices = () => {
-	mainContent.style.left = '-200vw';
-	header.style.backgroundColor = 'transparent';
-	headerLogoBlue.style.display = 'none';
-	headerLogoWhite.style.display = 'block';
-	headerButtons.forEach((button) => {
-		button.style.color = 'white';
-		button.style.borderBottomColor = 'white';
-	});
+	moveMainContent('my-services');
+	changeHeaderColor('light');
 };
 
 const moveToContact = () => {
-	mainContent.style.left = '-300vw';
-	headerLogoWhite.style.display = 'none';
-	headerLogoBlue.style.display = 'block';
-	headerButtons.forEach((button) => {
-		button.style.color = '#2a3840';
-		button.style.borderBottomColor = '#2a3840';
-	});
+	moveMainContent('contact');
+	changeHeaderColor('dark');
 };
 
 const moveToFaq = () => {
-	mainContent.style.left = '-400vw';
-	header.style.backgroundColor = 'transparent';
-	headerLogoBlue.style.display = 'none';
-	headerLogoWhite.style.display = 'block';
-	headerButtons.forEach((button) => {
-		button.style.color = 'white';
-		button.style.borderBottomColor = 'white';
-	});
+	moveMainContent('faq');
+	changeHeaderColor('light');
 };
 
-const moveContent = (whereTo) => {
-	switch (whereTo) {
-		case 'home':
-			moveToHome();
-			break;
-		case 'about-me':
-			moveToAboutMe();
-			break;
-		case 'my-services':
-			moveToMyServices();
-			break;
-		case 'contact':
-			moveToContact();
-			break;
-		case 'faq':
-			moveToFaq();
-			break;
-	}
+const moveContent = {
+	home: () => moveToHome(),
+	'about-me': () => moveToAboutMe(),
+	'my-services': () => moveToMyServices(),
+	contact: () => moveToContact(),
+	faq: () => moveToFaq(),
 };
 
 homeRollDownButton.onclick = () => {
-	moveContent('about-me');
+	moveHeader();
+	moveContent['about-me']();
 };
 
 headerButtons.forEach((button) => {
 	button.onclick = () => {
-		moveContent(button.id);
+		moveContent[button.id]();
 		handleActiveClass(button);
 	};
 });
 
 headerLogos.forEach((logo) => {
 	logo.onclick = () => {
-		moveContent('home');
+		moveHeader();
+		moveContent['home']();
+	};
+});
+
+faqQuestions.forEach((question) => {
+	question.onclick = () => {
+		faqQuestions.forEach((question) => {
+			question.removeAttribute('open');
+		});
 	};
 });

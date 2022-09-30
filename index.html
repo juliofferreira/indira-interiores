@@ -31,18 +31,20 @@
 				<img
 					src="./assets/img/main-logo-blue.svg"
 					alt="Logo Indira Interiores Casa & Saúde"
-					class="header__logo header__logo--blue"
+					class="header__logo"
 				/>
 				<img
 					src="./assets//img//main-logo-white.svg"
 					alt="Logo Indira Interiores Casa & Saúde"
-					class="header__logo header__logo--white"
+					class="header__logo header__logo--inactive"
 				/>
 			</div>
 			<nav class="header__nav">
 				<ul class="header__list">
 					<li class="header__list-item">
-						<button class="header__list-button" id="about-me">Sobre mim</button>
+						<button class="header__list-button active" id="about-me">
+							Sobre mim
+						</button>
 					</li>
 					<li class="header__list-item">
 						<button class="header__list-button" id="my-services">
@@ -58,7 +60,7 @@
 				</ul>
 			</nav>
 		</header>
-		<main class="main">
+		<main class="main main--home">
 			<section class="home">
 				<video autoplay muted loop class="home__video">
 					<source src="./assets/video/home.mp4" type="video/mp4" />
@@ -197,7 +199,7 @@
 			</section>
 			<section class="faq">
 				<div class="faq__container">
-					<details>
+					<details class="faq__question">
 						<summary>A quem esse trabalho é direcionado?</summary>
 						<p>
 							Todas as pessoas que possuem um quadro clínico de saúde físico ou
@@ -211,7 +213,7 @@
 							às necessidades físicas e emocionais do indivíduo.
 						</p>
 					</details>
-					<details>
+					<details class="faq__question">
 						<summary>
 							É necessário chegar à consulta com um diagnóstico prévio?
 						</summary>
@@ -229,7 +231,7 @@
 							profissionais que possam estar envolvidos em seu tratamento.
 						</p>
 					</details>
-					<details>
+					<details class="faq__question">
 						<summary>
 							Vou precisar ingerir ou comer alimentos específicos neste serviço?
 						</summary>
@@ -240,7 +242,7 @@
 							e na utilização dos espaços da casa.
 						</p>
 					</details>
-					<details>
+					<details class="faq__question">
 						<summary>A consultoria é realizada em quantas sessões?</summary>
 						<p>
 							Serão 3 sessões totalmente online, que ocorrerão em um espaçamento
@@ -251,7 +253,7 @@
 							intervenção.
 						</p>
 					</details>
-					<details>
+					<details class="faq__question">
 						<summary>
 							Quanto precisarei investir nas modificações propostas?
 						</summary>
@@ -269,7 +271,7 @@
 					</details>
 				</div>
 				<div class="faq__container">
-					<details>
+					<details class="faq__question">
 						<summary>Qual a diferença para um projeto de arquitetura?</summary>
 						<p>
 							Em um projeto de arquitetura a precisão das medidas é muito
@@ -288,7 +290,7 @@
 							necessidades.
 						</p>
 					</details>
-					<details>
+					<details class="faq__question">
 						<summary>Esta consultoria é o mesmo que Feng Shui?</summary>
 						<p>
 							Sim, em partes. Além das questões da arquitetura e da
@@ -298,7 +300,7 @@
 							como a aromaterapia e a cromoterapia.
 						</p>
 					</details>
-					<details>
+					<details class="faq__question">
 						<summary>
 							Vou ter assessoria na decoração, ao comprar os novos objetos da
 							casa?
@@ -311,7 +313,7 @@
 							cada caso, mas este não é o foco do trabalho.
 						</p>
 					</details>
-					<details>
+					<details class="faq__question">
 						<summary>
 							Em quanto tempo preciso retornar para realizar outra consulta?
 						</summary>

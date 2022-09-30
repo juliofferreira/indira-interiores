@@ -46,13 +46,28 @@ body {
 	display: flex;
 	align-items: flex-end;
 	position: absolute;
-	left: 0;
 	top: 0;
 	height: 100vh;
 	width: 500vw;
 	transition: 1s;
 }
 
-.active {
-	border-bottom: 1px solid var(--black);
+.main--home {
+	left: 0;
+}
+
+.main--about-me {
+	left: -100vw;
+}
+
+.main--my-services {
+	left: -200vw;
+}
+
+.main--contact {
+	left: -300vw;
+}
+
+.main--faq {
+	left: -400vw;
 }

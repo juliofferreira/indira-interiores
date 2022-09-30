@@ -72,7 +72,7 @@
 	text-transform: uppercase;
 }
 
-.home__rolldown-button {
+.home__roll-down-button {
 	align-self: flex-end;
 	border: none;
 	border-bottom: var(--2px) solid var(--white);

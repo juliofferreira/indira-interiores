@@ -1,5 +1,5 @@
 .header {
-	background-color: var(--background-color);
+	background-color: transparent;
 	position: absolute;
 	top: -15vh;
 	left: 0;
@@ -12,6 +12,10 @@
 	z-index: 1;
 }
 
+.header--down {
+	top: 0;
+}
+
 .header__list {
 	display: flex;
 	gap: 4rem;
@@ -20,6 +24,7 @@
 .header__list-button {
 	background-color: transparent;
 	border: none;
+	border-bottom-color: var(--black);
 	color: var(--black);
 	cursor: pointer;
 	font-family: var(--font);
@@ -33,16 +38,21 @@
 	transition: 1s;
 }
 
+.header__list-button--light {
+	color: var(--white);
+	border-bottom-color: var(--white);
+}
+
 .header__logo {
 	cursor: pointer;
 	margin-left: 8rem;
 	width: 20rem;
 }
 
-.header__logo--white {
+.header__logo--inactive {
 	display: none;
 }
 
-.header__logo--blue {
-	display: block;
+.active {
+	border-bottom: 1px solid;
 }
