@@ -1,5 +1,6 @@
 'use strict';
 
+const home = document.querySelector('.home');
 const homeRollDownButton = document.querySelector('.home__roll-down-button');
 const mainContent = document.querySelector('.main');
 const header = document.querySelector('.header');
@@ -75,10 +76,20 @@ const moveContent = {
 	faq: () => moveToFaq(),
 };
 
-homeRollDownButton.onclick = () => {
+const moveFromHomeToAboutMe = () => {
 	moveHeader();
 	moveContent['about-me']();
 };
+
+homeRollDownButton.onclick = () => {
+	moveFromHomeToAboutMe();
+};
+
+home.addEventListener('mousewheel', (event) => {
+	if (event.wheelDelta <= 0) {
+		moveFromHomeToAboutMe();
+	}
+});
 
 headerButtons.forEach((button) => {
 	button.onclick = () => {
