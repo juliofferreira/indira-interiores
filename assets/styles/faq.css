@@ -64,21 +64,6 @@
 	border-bottom: none;
 }
 
-.faq details[open] summary ~ * {
-	animation: sweep 0.5s ease-in-out;
-}
-
-@keyframes sweep {
-	0% {
-		opacity: 0;
-		margin-left: -10px;
-	}
-	100% {
-		opacity: 1;
-		margin-left: 0px;
-	}
-}
-
 .faq details[open] > summary::before {
 	content: '';
 	background: url('../img/triangle.svg') no-repeat center / contain;

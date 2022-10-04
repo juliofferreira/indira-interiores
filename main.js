@@ -107,8 +107,10 @@ headerLogos.forEach((logo) => {
 
 faqQuestions.forEach((question) => {
 	question.onclick = () => {
-		faqQuestions.forEach((question) => {
-			question.removeAttribute('open');
+		faqQuestions.forEach((clickedQuestion) => {
+			if (question !== clickedQuestion) {
+				clickedQuestion.removeAttribute('open');
+			}
 		});
 	};
 });
