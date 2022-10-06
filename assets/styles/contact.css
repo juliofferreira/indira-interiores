@@ -5,12 +5,20 @@
 	height: 85vh;
 }
 
+.contact__container {
+	display: flex;
+	height: 90%;
+	justify-content: center;
+}
+
+.contact__picture {
+	height: 100%;
+}
+
 .contact__content {
 	background-color: var(--background-color-opacity);
 	text-align: left;
-	position: absolute;
 	width: 50%;
-	left: 15%;
 	padding: 2rem 3rem;
 	display: flex;
 	align-items: flex-start;
