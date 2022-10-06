@@ -5,7 +5,8 @@ const homeRollDownButton = document.querySelector('.home__roll-down-button');
 const mainContent = document.querySelector('.main');
 const header = document.querySelector('.header');
 const headerLogos = document.querySelectorAll('.header__logo');
-const headerButtons = document.querySelectorAll('.header__list-button');
+const headerButtons = document.querySelectorAll('[data-headerbutton]');
+const contactButton = document.querySelector('[data-contactbutton]');
 const faqQuestions = document.querySelectorAll('.faq__question');
 
 const handleActiveClass = (element) => {
@@ -47,6 +48,7 @@ const moveToHome = () => {
 	moveMainContent('home');
 };
 
+// FIXME: weird way to access button index 0
 const moveToAboutMe = () => {
 	moveMainContent('about-me');
 	changeHeaderColor('dark');
@@ -69,16 +71,16 @@ const moveToFaq = () => {
 };
 
 const moveContent = {
-	home: () => moveToHome(),
-	'about-me': () => moveToAboutMe(),
-	'my-services': () => moveToMyServices(),
-	contact: () => moveToContact(),
-	faq: () => moveToFaq(),
+	toHome: () => moveToHome(),
+	toAboutMe: () => moveToAboutMe(),
+	toMyServices: () => moveToMyServices(),
+	toContact: () => moveToContact(),
+	toFaq: () => moveToFaq(),
 };
 
 const moveFromHomeToAboutMe = () => {
 	moveHeader();
-	moveContent['about-me']();
+	moveContent['toAboutMe']();
 };
 
 homeRollDownButton.onclick = () => {
@@ -93,15 +95,21 @@ home.addEventListener('mousewheel', (event) => {
 
 headerButtons.forEach((button) => {
 	button.onclick = () => {
-		moveContent[button.id]();
+		moveContent[button.dataset.headerbutton]();
 		handleActiveClass(button);
 	};
 });
 
+// FIXME: weird way to access button index 2
+contactButton.onclick = () => {
+	moveContent['toContact']();
+	handleActiveClass(headerButtons[2]);
+};
+
 headerLogos.forEach((logo) => {
 	logo.onclick = () => {
 		moveHeader();
-		moveContent['home']();
+		moveContent['toHome']();
 	};
 });
 

@@ -32,30 +32,52 @@
 					src="./assets/img/main-logo-blue.svg"
 					alt="Logo Indira Interiores Casa & Saúde"
 					class="header__logo"
+					role="link"
 				/>
 				<img
 					src="./assets//img//main-logo-white.svg"
 					alt="Logo Indira Interiores Casa & Saúde"
 					class="header__logo header__logo--inactive"
+					role="link"
 				/>
 			</div>
 			<nav class="header__nav">
 				<ul class="header__list">
 					<li class="header__list-item">
-						<button class="header__list-button active" id="about-me">
+						<button
+							class="header__list-button active"
+							data-headerbutton="toAboutMe"
+							role="link"
+						>
 							Sobre mim
 						</button>
 					</li>
 					<li class="header__list-item">
-						<button class="header__list-button" id="my-services">
+						<button
+							class="header__list-button"
+							data-headerbutton="toMyServices"
+							role="link"
+						>
 							Meus serviços
 						</button>
 					</li>
 					<li class="header__list-item">
-						<button class="header__list-button" id="contact">Contato</button>
+						<button
+							class="header__list-button"
+							data-headerbutton="toContact"
+							role="link"
+						>
+							Contato
+						</button>
 					</li>
 					<li class="header__list-item">
-						<button class="header__list-button" id="faq">Dúvidas</button>
+						<button
+							class="header__list-button"
+							data-headerbutton="toFaq"
+							role="link"
+						>
+							Dúvidas
+						</button>
 					</li>
 				</ul>
 			</nav>
@@ -88,7 +110,9 @@
 						alt="Logo Escrito Casa & Saúde"
 						class="home__tagline"
 					/>
-					<button class="home__roll-down-button">Role Para Baixo</button>
+					<button class="home__roll-down-button" role="link">
+						Role Para Baixo
+					</button>
 				</div>
 			</section>
 			<section class="about-me">
@@ -122,7 +146,9 @@
 							na sua saúde?
 						</p>
 						<p class="about-me__text">Sejam bem-vindos ao Casa e Saúde</p>
-						<button class="about-me__button">Entre em contato</button>
+						<button class="about-me__button" data-contactbutton role="link">
+							Entre em contato
+						</button>
 					</div>
 					<img
 						src="./assets/img/about-me-picture.jpg"
