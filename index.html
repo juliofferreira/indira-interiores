@@ -84,7 +84,7 @@
 		</header>
 		<main class="main main--home">
 			<section class="home">
-				<video autoplay muted loop class="home__video">
+				<video autoplay muted loop class="home__background-video">
 					<source src="./assets/video/home.mp4" type="video/mp4" />
 				</video>
 				<img
@@ -101,9 +101,21 @@
 					proporcionando acolhimento e bem estar à condição de saúde física ou
 					emocional debilitada.
 				</h2>
-				<button class="home__video-button">
+				<button class="home__video-button" id="video-button-home">
 					Assistir Vídeo de Apresentação
 				</button>
+				<figure class="home__video-container">
+					<iframe
+						width="560"
+						height="315"
+						src="https://www.youtube.com/embed/WcLBBm0_5vc"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+						class="home__video"
+					></iframe>
+				</figure>
 				<div>
 					<img
 						src="./assets/img/tagline-white.svg"
@@ -158,7 +170,7 @@
 				</div>
 			</section>
 			<section class="my-services">
-				<video autoplay muted loop class="my-services__video">
+				<video autoplay muted loop class="my-services__background-video">
 					<source src="./assets/video/my-services.mp4" type="video/mp4" />
 				</video>
 				<div class="my-services__content-container">
@@ -184,7 +196,20 @@
 						</p>
 					</div>
 				</div>
-				<button>Assistir Vídeo</button>
+				<button class="my-services__video-button" id="video-button-my-services">
+					Assistir Vídeo
+				</button>
+				<figure class="my-services__video-container">
+					<iframe
+						width="560"
+						height="315"
+						src="https://www.youtube.com/embed/4MMuqDi_Lkw"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					></iframe>
+				</figure>
 			</section>
 			<section class="contact">
 				<div class="contact__container">

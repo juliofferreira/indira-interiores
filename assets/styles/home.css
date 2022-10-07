@@ -12,7 +12,7 @@
 	padding: auto 3rem;
 }
 
-.home__video {
+.home__background-video {
 	min-height: 100vh;
 	min-width: 100vw;
 	position: absolute;
@@ -54,6 +54,24 @@
 	width: 18vw;
 }
 
+.home__video-container {
+	visibility: hidden;
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	backdrop-filter: blur(0.2rem) brightness(60%);
+	opacity: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.home__video-container--active {
+	visibility: visible;
+	opacity: 1;
+	transition: 1s;
+}
+
 .home__roll-down-button,
 .home__video-button {
 	background-color: transparent;
@@ -70,6 +88,12 @@
 	padding: 1.3em;
 	text-align: center;
 	text-transform: uppercase;
+	transition: 0.5s;
+}
+
+.home__video-button:hover {
+	background-color: var(--white);
+	color: var(--black);
 }
 
 .home__roll-down-button {

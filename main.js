@@ -1,6 +1,7 @@
 'use strict';
 
 const home = document.querySelector('.home');
+const myServices = document.querySelector('.my-services');
 const homeRollDownButton = document.querySelector('.home__roll-down-button');
 const mainContent = document.querySelector('.main');
 const header = document.querySelector('.header');
@@ -8,6 +9,12 @@ const headerLogos = document.querySelectorAll('.header__logo');
 const headerButtons = document.querySelectorAll('[data-headerbutton]');
 const contactButton = document.querySelector('[data-contactbutton]');
 const faqQuestions = document.querySelectorAll('.faq__question');
+const homeVideoButton = document.querySelector('.home__video-button');
+const homeVideo = document.querySelector('.home__video-container');
+const myServicesVideoButton = document.querySelector(
+	'.my-services__video-button'
+);
+const myServicesVideo = document.querySelector('.my-services__video-container');
 
 const handleActiveClass = (element) => {
 	headerButtons.forEach((button) => {
@@ -32,9 +39,8 @@ const changeHeaderColor = (color) => {
 	if (
 		(color === 'light' && headerLogos[0].classList[1]) ||
 		(color === 'dark' && headerLogos[1].classList[1])
-	) {
+	)
 		return;
-	}
 
 	headerLogos.forEach((logo) => {
 		logo.classList.toggle('header__logo--inactive');
@@ -83,42 +89,56 @@ const moveFromHomeToAboutMe = () => {
 	moveContent['toAboutMe']();
 };
 
-homeRollDownButton.onclick = () => {
+homeRollDownButton.addEventListener('click', () => {
 	moveFromHomeToAboutMe();
-};
+});
 
 home.addEventListener('mousewheel', (event) => {
-	if (event.wheelDelta <= 0) {
-		moveFromHomeToAboutMe();
-	}
+	if (event.wheelDelta <= 0) moveFromHomeToAboutMe();
+});
+
+home.addEventListener('click', (event) => {
+	if (event.target.id !== 'video-button-home')
+		homeVideo.classList.remove('home__video-container--active');
 });
 
 headerButtons.forEach((button) => {
-	button.onclick = () => {
+	button.addEventListener('click', () => {
 		moveContent[button.dataset.headerbutton]();
 		handleActiveClass(button);
-	};
+	});
 });
 
 // FIXME: weird way to access button index 2
-contactButton.onclick = () => {
+contactButton.addEventListener('click', () => {
 	moveContent['toContact']();
 	handleActiveClass(headerButtons[2]);
-};
+});
 
 headerLogos.forEach((logo) => {
-	logo.onclick = () => {
+	logo.addEventListener('click', () => {
 		moveHeader();
 		moveContent['toHome']();
-	};
+	});
 });
 
 faqQuestions.forEach((question) => {
-	question.onclick = () => {
+	question.addEventListener('click', () => {
 		faqQuestions.forEach((clickedQuestion) => {
-			if (question !== clickedQuestion) {
-				clickedQuestion.removeAttribute('open');
-			}
+			if (question !== clickedQuestion) clickedQuestion.removeAttribute('open');
 		});
-	};
+	});
+});
+
+homeVideoButton.addEventListener('click', () => {
+	homeVideo.classList.add('home__video-container--active');
+});
+
+myServicesVideoButton.addEventListener('click', () => {
+	myServicesVideo.classList.add('my-services__video-container--active');
+});
+
+myServices.addEventListener('click', (event) => {
+	if (event.target.id !== 'video-button-my-services')
+		myServicesVideo.classList.remove('my-services__video-container--active');
 });

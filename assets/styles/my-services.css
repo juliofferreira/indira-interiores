@@ -19,7 +19,7 @@
 	z-index: -1;
 }
 
-.my-services__video {
+.my-services__background-video {
 	min-height: 100vh;
 	min-width: 100vw;
 	position: absolute;
@@ -27,7 +27,7 @@
 	z-index: -2;
 }
 
-.my-services button {
+.my-services__video-button {
 	background-color: transparent;
 	border: var(--2px) solid var(--white);
 	color: var(--white);
@@ -40,6 +40,33 @@
 	text-transform: uppercase;
 	height: 5rem;
 	width: 20rem;
+	transition: 0.5s;
+}
+
+.my-services__video-button:hover {
+	background-color: var(--white);
+	color: var(--black);
+}
+
+.my-services__video-container {
+	visibility: hidden;
+	position: absolute;
+	top: -15vh;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	backdrop-filter: blur(0.2rem) brightness(60%);
+	opacity: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+}
+
+.my-services__video-container--active {
+	visibility: visible;
+	opacity: 1;
+	transition: 1s;
 }
 
 .my-services__content-container {
