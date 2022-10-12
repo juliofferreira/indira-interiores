@@ -34,12 +34,12 @@ const moveMainContent = (section) => {
 	} main--${section}`;
 };
 
-const moveHeader = () => {
-	if (header.classList.contains('header--down')) {
-		header.classList.remove('header--down');
-	} else {
-		header.classList.add('header--down');
-	}
+const moveHeaderUp = () => {
+	header.classList.remove('header--down');
+};
+
+const moveHeaderDown = () => {
+	header.classList.add('header--down');
 };
 
 const changeHeaderColor = (color) => {
@@ -59,6 +59,7 @@ const changeHeaderColor = (color) => {
 };
 
 const moveToHome = () => {
+	moveHeaderUp();
 	moveMainContent('home');
 };
 
@@ -93,7 +94,7 @@ const moveContent = {
 };
 
 const moveFromHomeToAboutMe = () => {
-	moveHeader();
+	moveHeaderDown();
 	moveContent['toAboutMe']();
 };
 
@@ -116,7 +117,6 @@ contactButton.addEventListener('click', () => {
 
 headerLogos.forEach((logo) => {
 	logo.addEventListener('click', () => {
-		moveHeader();
 		moveContent['toHome']();
 	});
 });
