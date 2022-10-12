@@ -12,9 +12,10 @@
 	padding: auto 3rem;
 }
 
-.home__video {
-	min-height: 100vh;
-	min-width: 100vw;
+.home__background-video {
+	object-fit: cover;
+	height: 100vh;
+	width: 100vw;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -51,10 +52,28 @@
 }
 
 .home__tagline {
-	width: 18%;
+	width: 18vw;
 }
 
-.home__rolldown-button,
+.home__video-container {
+	visibility: hidden;
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	backdrop-filter: blur(0.2rem) brightness(60%);
+	opacity: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.home__video-container--active {
+	visibility: visible;
+	opacity: 1;
+	transition: 1s;
+}
+
+.home__roll-down-button,
 .home__video-button {
 	background-color: transparent;
 	color: var(--white);
@@ -70,9 +89,15 @@
 	padding: 1.3em;
 	text-align: center;
 	text-transform: uppercase;
+	transition: 0.5s;
 }
 
-.home__rolldown-button {
+.home__video-button:hover {
+	background-color: var(--white);
+	color: var(--black);
+}
+
+.home__roll-down-button {
 	align-self: flex-end;
 	border: none;
 	border-bottom: var(--2px) solid var(--white);
@@ -82,10 +107,12 @@
 	margin-right: 4em;
 	padding: 0;
 	padding-bottom: 0.3em;
+	position: absolute;
+	right: 6rem;
 	text-align: left;
 }
 
-.home__rolldown-button::after {
+.home__roll-down-button::after {
 	content: url('../img/down-arrow.svg');
 	display: inline-block;
 	margin-left: 0.5rem;

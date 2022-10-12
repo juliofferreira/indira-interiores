@@ -10,7 +10,7 @@
 	--blue: #64a1bc;
 	--black: #2a3840;
 	--background-color: #f9f6f2;
-	--background-color-opacity: rgba(249, 246, 242, 0.92);
+	--background-color-opacity: rgba(249, 246, 242, 0.85);
 	--font: 'Cormorant Garamond', serif;
 	--80px: 5rem;
 	--70px: 4.375rem;
@@ -32,13 +32,17 @@
 }
 
 html {
-	font-size: 16px;
+	font-size: 14px;
+	overflow: hidden;
+	width: 100vw;
+	height: 100%;
 }
 
 body {
 	background-color: var(--background-color);
 	font-family: var(--font);
-	max-width: 100vw;
+	width: 100vw;
+	height: 100%;
 	overflow: hidden;
 }
 
@@ -46,13 +50,37 @@ body {
 	display: flex;
 	align-items: flex-end;
 	position: absolute;
-	left: 0;
 	top: 0;
 	height: 100vh;
 	width: 500vw;
 	transition: 1s;
 }
 
-.active {
-	border-bottom: 1px solid var(--black);
+.main--home {
+	left: 0;
+}
+
+.main--about-me {
+	left: -100vw;
+}
+
+.main--my-services {
+	left: -200vw;
+}
+
+.main--contact {
+	left: -300vw;
+}
+
+.main--faq {
+	left: -400vw;
+}
+
+@media screen and (max-width: 1500px) {
+	html {
+		font-size: 13px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
 }

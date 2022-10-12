@@ -31,36 +31,60 @@
 				<img
 					src="./assets/img/main-logo-blue.svg"
 					alt="Logo Indira Interiores Casa & Saúde"
-					class="header__logo header__logo--blue"
+					class="header__logo"
+					role="link"
 				/>
 				<img
 					src="./assets//img//main-logo-white.svg"
 					alt="Logo Indira Interiores Casa & Saúde"
-					class="header__logo header__logo--white"
+					class="header__logo header__logo--inactive"
+					role="link"
 				/>
 			</div>
 			<nav class="header__nav">
 				<ul class="header__list">
 					<li class="header__list-item">
-						<button class="header__list-button" id="about-me">Sobre mim</button>
+						<button
+							class="header__list-button active"
+							data-headerbutton="toAboutMe"
+							role="link"
+						>
+							Sobre mim
+						</button>
 					</li>
 					<li class="header__list-item">
-						<button class="header__list-button" id="my-services">
+						<button
+							class="header__list-button"
+							data-headerbutton="toMyServices"
+							role="link"
+						>
 							Meus serviços
 						</button>
 					</li>
 					<li class="header__list-item">
-						<button class="header__list-button" id="contact">Contato</button>
+						<button
+							class="header__list-button"
+							data-headerbutton="toContact"
+							role="link"
+						>
+							Contato
+						</button>
 					</li>
 					<li class="header__list-item">
-						<button class="header__list-button" id="faq">Dúvidas</button>
+						<button
+							class="header__list-button"
+							data-headerbutton="toFaq"
+							role="link"
+						>
+							Dúvidas
+						</button>
 					</li>
 				</ul>
 			</nav>
 		</header>
-		<main class="main">
+		<main class="main main--home">
 			<section class="home">
-				<video autoplay muted loop class="home__video">
+				<video autoplay muted loop class="home__background-video">
 					<source src="./assets/video/home.mp4" type="video/mp4" />
 				</video>
 				<img
@@ -75,53 +99,78 @@
 				<h2 class="home__subtitle">
 					Diferentes áreas, um mesmo objetivo: criar um ambiente saudável,
 					proporcionando acolhimento e bem estar à condição de saúde física ou
-					emocional delibitada.
+					emocional debilitada.
 				</h2>
-				<button class="home__video-button">
+				<button class="home__video-button" id="video-button-home">
 					Assistir Vídeo de Apresentação
 				</button>
-				<img
-					src="./assets/img/tagline-white.svg"
-					alt="Logo Escrito Casa & Saúde"
-					class="home__tagline"
-				/>
-				<button class="home__rolldown-button">Role Para Baixo</button>
+				<figure class="home__video-container">
+					<iframe
+						width="560"
+						height="315"
+						src="https://www.youtube.com/embed/WcLBBm0_5vc"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+						class="home__video"
+					></iframe>
+				</figure>
+				<div>
+					<img
+						src="./assets/img/tagline-white.svg"
+						alt="Logo Escrito Casa & Saúde"
+						class="home__tagline"
+					/>
+					<button class="home__roll-down-button" role="link">
+						Role Para Baixo
+					</button>
+				</div>
 			</section>
 			<section class="about-me">
-				<div class="about-me__content">
-					<div class="about-me__image"></div>
-					<h2 class="about-me__title">Olá! Quem sou eu?</h2>
-					<p class="about-me__text">Eu sou a Indira.</p>
-					<p class="about-me__text">
-						Atuo na área de arquitetura de interiores desde 2010, com foco em
-						arquitetura residencial, e sempre me encantei pela relação entre a
-						casa e o ser humano.
-					</p>
-					<p class="about-me__text">
-						E foi no ano de 2018 que me aproximei ainda mais deste tema. Após
-						passar por um tratamento intensivo de saúde, pude sentir os
-						benefícios deste universo. Posteriormente, meus caminhos me levaram
-						à Medicina Chinesa e o Feng Shui. E, neste encontro, visualizei um
-						método de integração dessas áreas com a arquitetura. Assim nasceu o
-						Casa e Saúde.
-					</p>
-					<p class="about-me__text">
-						Seja por meio de terapias complementares, Reiki, Aromaterapia e, até
-						mesmo, a influência do Ioga, esses pequenos detalhes do dia a dia
-						podem contribuir diante de um quadro clínico, que pode ser físico ou
-						emocional. E todos eles quando associados à arquitetura, contribuem
-						para promover o bem-estar em sua casa.
-					</p>
-					<p class="about-me__text">
-						Já parou para pensar no quanto o bem-estar da sua casa interfere na
-						sua saúde?
-					</p>
-					<p class="about-me__text">Sejam bem-vindos ao Casa e Saúde</p>
-					<button class="about-me__button">Entre em contato</button>
+				<div class="about-me__container">
+					<div class="about-me__content">
+						<div class="about-me__image"></div>
+						<h2 class="about-me__title">Olá! Quem sou eu?</h2>
+						<p class="about-me__text">Eu sou a Indira.</p>
+						<p class="about-me__text">
+							Atuo na área de arquitetura de interiores desde 2010, com foco em
+							arquitetura residencial, e sempre me encantei pela relação entre a
+							casa e o ser humano.
+						</p>
+						<p class="about-me__text">
+							E foi no ano de 2018 que me aproximei ainda mais deste tema. Após
+							passar por um tratamento intensivo de saúde, pude sentir os
+							benefícios deste universo. Posteriormente, meus caminhos me
+							levaram à Medicina Chinesa e o Feng Shui. E, neste encontro,
+							visualizei um método de integração dessas áreas com a arquitetura.
+							Assim nasceu o Casa e Saúde.
+						</p>
+						<p class="about-me__text">
+							Seja por meio de terapias complementares, Reiki, Aromaterapia e,
+							até mesmo, a influência do Ioga, esses pequenos detalhes do dia a
+							dia podem contribuir diante de um quadro clínico, que pode ser
+							físico ou emocional. E todos eles quando associados à arquitetura,
+							contribuem para promover o bem-estar em sua casa.
+						</p>
+						<p class="about-me__text">
+							Já parou para pensar no quanto o bem-estar da sua casa interfere
+							na sua saúde?
+						</p>
+						<p class="about-me__text">Sejam bem-vindos ao Casa e Saúde.</p>
+						<button class="about-me__button" data-contactbutton role="link">
+							Entre em contato
+						</button>
+					</div>
+					<img
+						src="./assets/img/about-me-picture.jpg"
+						alt=""
+						class="about-me__picture"
+					/>
 				</div>
 			</section>
 			<section class="my-services">
-				<video autoplay muted loop class="my-services__video">
+				<video autoplay muted loop class="my-services__background-video">
 					<source src="./assets/video/my-services.mp4" type="video/mp4" />
 				</video>
 				<div class="my-services__content-container">
@@ -142,76 +191,97 @@
 						<p>
 							O pilar central da harmonização energética é a medicina chinesa e,
 							dentro dela, se encontra o Feng Shui. Ao longo do processo, outras
-							práticas poderão ser inseridads como, por exemplo, a aromaterapia
-							e a cromoterapia.
+							práticas poderão ser inseridas como, por exemplo, a aromaterapia e
+							a cromoterapia.
 						</p>
 					</div>
 				</div>
-				<button>Assistir Vídeo</button>
+				<button class="my-services__video-button" id="video-button-my-services">
+					Assistir Vídeo
+				</button>
+				<figure class="my-services__video-container">
+					<iframe
+						width="560"
+						height="315"
+						src="https://www.youtube.com/embed/4MMuqDi_Lkw"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						class="my-services__video"
+						allowfullscreen
+					></iframe>
+				</figure>
 			</section>
 			<section class="contact">
-				<div class="contact__content">
-					<h2>
-						<em>Agende uma</em><br />
-						Consulta
-					</h2>
-					<p>Vamos conversar?</p>
-					<p>
-						Sinta-se livre para utilizar os detalhes de contato abaixo para
-						esclarecer qualquer dúvida ou agendar uma consulta.
-					</p>
-					<address>
-						E-mail:
-						<a
-							href="mailto:casaesaude@indirainteriores.com"
-							class="contact__email"
-							>casaesaude@indirainteriores.com</a
-						>
-					</address>
-					<div class="contact__socials">
-						<a
-							href="https://www.instagram.com/indira.interiores_casaesaude/"
-							class="contact__social contact__social--instagram"
-							>Instagram Indira Interiores Casa & Saúde</a
-						>
-						<a
-							href="https://api.whatsapp.com/send/?phone=5512991128968"
-							class="contact__social contact__social--whatsapp"
-							>Whatsapp Indira Interiores Casa & Saúde</a
-						>
-						<a
-							href="https://www.youtube.com/channel/UCWUOjRaJ01S2f1N4GnKhbIw"
-							class="contact__social contact__social--youtube"
-							>YouTube Indira Interiores Casa & Saúde</a
-						>
+				<div class="contact__container">
+					<div class="contact__content">
+						<h2>
+							<em>Agende uma</em><br />
+							Consulta
+						</h2>
+						<p>Vamos conversar?</p>
+						<p>
+							Sinta-se livre para utilizar os detalhes de contato abaixo para
+							esclarecer qualquer dúvida ou agendar uma consulta.
+						</p>
+						<address>
+							E-mail:
+							<a
+								href="mailto:casaesaude@indirainteriores.com"
+								class="contact__email"
+								>casaesaude@indirainteriores.com</a
+							>
+						</address>
+						<div class="contact__socials">
+							<a
+								href="https://www.instagram.com/indira.interiores_casaesaude/"
+								class="contact__social contact__social--instagram"
+								>Instagram Indira Interiores Casa & Saúde</a
+							>
+							<a
+								href="https://api.whatsapp.com/send/?phone=5512991128968"
+								class="contact__social contact__social--whatsapp"
+								>Whatsapp Indira Interiores Casa & Saúde</a
+							>
+							<a
+								href="https://www.youtube.com/channel/UCWUOjRaJ01S2f1N4GnKhbIw"
+								class="contact__social contact__social--youtube"
+								>YouTube Indira Interiores Casa & Saúde</a
+							>
+						</div>
+						<div class="contact__instagram-secondary">
+							<span>Conheça também:</span>
+							<a
+								href="https://www.instagram.com/indira.interiores/"
+								class="contact__social-secondary contact__social--instagram-secondary"
+								>Instagram Indira Interiores</a
+							>
+						</div>
 					</div>
-					<div class="contact__instagram-secondary">
-						<span>Conheça também:</span>
-						<a
-							href="https://www.instagram.com/indira.interiores/"
-							class="contact__social-secondary contact__social--instagram-secondary"
-							>Instagram Indira Interiores</a
-						>
-					</div>
+					<img
+						src="./assets/img/contact-picture.jpg"
+						alt=""
+						class="contact__picture"
+					/>
 				</div>
 			</section>
 			<section class="faq">
 				<div class="faq__container">
-					<details>
+					<details class="faq__question">
 						<summary>A quem esse trabalho é direcionado?</summary>
 						<p>
 							Todas as pessoas que possuem um quadro clínico de saúde físico ou
 							emocional, em especial, aquelas que estão ou irão passar por algum
 							tratamento de médio ou longo prazo ou possuem algum quadro
 							crônico. A harmonização da sua casa nesse sentido irá, através de
-							arquitatura, verificar as questões de ergonomia, de circulaçãom as
+							arquitetura, verificar as questões de ergonomia, de circulação, as
 							condições de iluminação, e através dos princípios da medicina
 							chinesa, verificar as energias que possam estar em falta, ou
 							excesso, preparando a casa de modo a propiciar maior acolhimento
 							às necessidades físicas e emocionais do indivíduo.
 						</p>
 					</details>
-					<details>
+					<details class="faq__question">
 						<summary>
 							É necessário chegar à consulta com um diagnóstico prévio?
 						</summary>
@@ -229,7 +299,7 @@
 							profissionais que possam estar envolvidos em seu tratamento.
 						</p>
 					</details>
-					<details>
+					<details class="faq__question">
 						<summary>
 							Vou precisar ingerir ou comer alimentos específicos neste serviço?
 						</summary>
@@ -240,7 +310,7 @@
 							e na utilização dos espaços da casa.
 						</p>
 					</details>
-					<details>
+					<details class="faq__question">
 						<summary>A consultoria é realizada em quantas sessões?</summary>
 						<p>
 							Serão 3 sessões totalmente online, que ocorrerão em um espaçamento
@@ -251,7 +321,7 @@
 							intervenção.
 						</p>
 					</details>
-					<details>
+					<details class="faq__question">
 						<summary>
 							Quanto precisarei investir nas modificações propostas?
 						</summary>
@@ -269,7 +339,7 @@
 					</details>
 				</div>
 				<div class="faq__container">
-					<details>
+					<details class="faq__question">
 						<summary>Qual a diferença para um projeto de arquitetura?</summary>
 						<p>
 							Em um projeto de arquitetura a precisão das medidas é muito
@@ -288,17 +358,17 @@
 							necessidades.
 						</p>
 					</details>
-					<details>
+					<details class="faq__question">
 						<summary>Esta consultoria é o mesmo que Feng Shui?</summary>
 						<p>
 							Sim, em partes. Além das questões da arquitetura e da
 							acessibilidade que nortearão as propostas no ambiente, o pilar
 							central da harmonização energética é a medicina chinesa, e dentro
-							desta o fengshui. Porém, outras práticas poderão ser inseridas,
+							desta o feng shui. Porém, outras práticas poderão ser inseridas,
 							como a aromaterapia e a cromoterapia.
 						</p>
 					</details>
-					<details>
+					<details class="faq__question">
 						<summary>
 							Vou ter assessoria na decoração, ao comprar os novos objetos da
 							casa?
@@ -311,7 +381,7 @@
 							cada caso, mas este não é o foco do trabalho.
 						</p>
 					</details>
-					<details>
+					<details class="faq__question">
 						<summary>
 							Em quanto tempo preciso retornar para realizar outra consulta?
 						</summary>

@@ -1,5 +1,3 @@
-alinhamento botão home e rolar para baixo
-fotos about-me e contact
-funcionamento botões video e about-me
-aria-hidden dos botões
-checar arquivos de background-gradient
+aria-hidden dos botões e tab-index
+diminuir brilho do background
+componentizar coisas iguais (vídeos, botões)

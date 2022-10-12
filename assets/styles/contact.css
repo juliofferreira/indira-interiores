@@ -5,18 +5,27 @@
 	height: 85vh;
 }
 
+.contact__container {
+	display: flex;
+	justify-content: center;
+	height: 85vh;
+}
+
+.contact__picture {
+	height: 100%;
+}
+
 .contact__content {
 	background-color: var(--background-color-opacity);
 	text-align: left;
-	position: absolute;
-	width: 50%;
-	left: 15%;
-	padding: 2rem 3rem;
+	width: 100%;
+	height: 85vh;
+	padding: 2rem 5rem;
+	padding-bottom: 10rem;
 	display: flex;
 	align-items: flex-start;
 	flex-direction: column;
-	justify-content: center;
-	gap: 3rem;
+	justify-content: space-evenly;
 }
 
 .contact__content p,

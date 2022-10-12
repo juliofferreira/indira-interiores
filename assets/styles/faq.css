@@ -22,6 +22,10 @@
 	width: 50%;
 }
 
+.faq details {
+	transition: 1s;
+}
+
 .faq details > summary {
 	color: var(--white);
 	border-bottom: 1px solid var(--white);
@@ -49,7 +53,7 @@
 
 .faq details[open] > p {
 	border-bottom: 1px solid var(--white);
-	padding: 2rem;
+	padding: 0 2rem 2rem;
 }
 
 .faq details:last-child[open] > p {

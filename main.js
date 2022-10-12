@@ -1,12 +1,24 @@
 'use strict';
 
-const homeRolldownButton = document.querySelector('.home__rolldown-button');
+const home = document.querySelector('.home');
+const myServices = document.querySelector('.my-services');
+const homeRollDownButton = document.querySelector('.home__roll-down-button');
 const mainContent = document.querySelector('.main');
 const header = document.querySelector('.header');
 const headerLogos = document.querySelectorAll('.header__logo');
-const headerLogoBlue = document.querySelector('.header__logo--blue');
-const headerLogoWhite = document.querySelector('.header__logo--white');
-const headerButtons = document.querySelectorAll('.header__list-button');
+const headerButtons = document.querySelectorAll('[data-headerbutton]');
+const contactButton = document.querySelector('[data-contactbutton]');
+const faqQuestions = document.querySelectorAll('.faq__question');
+const homeVideoButton = document.querySelector('.home__video-button');
+const homeVideoContainer = document.querySelector('.home__video-container');
+const homeVideo = document.querySelector('.home__video');
+const myServicesVideoButton = document.querySelector(
+	'.my-services__video-button'
+);
+const myServicesVideoContainer = document.querySelector(
+	'.my-services__video-container'
+);
+const myServicesVideo = document.querySelector('.my-services__video');
 
 const handleActiveClass = (element) => {
 	headerButtons.forEach((button) => {
@@ -15,68 +27,132 @@ const handleActiveClass = (element) => {
 	element.classList.add('active');
 };
 
-const moveContent = (whereTo) => {
-	switch (whereTo) {
-		case 'home':
-			mainContent.style.left = '0';
-			header.style.top = '-15vh';
-			break;
-		case 'about-me':
-			mainContent.style.left = '-100vw';
-			header.style.top = '0';
-			handleActiveClass(headerButtons[0]);
-			headerLogoWhite.style.display = 'none';
-			headerLogoBlue.style.display = 'block';
-			headerButtons.forEach((button) => {
-				button.style.color = '#2a3840';
-				button.style.borderBottomColor = '#2a3840';
-			});
-			break;
-		case 'my-services':
-			mainContent.style.left = '-200vw';
-			header.style.backgroundColor = 'transparent';
-			headerLogoBlue.style.display = 'none';
-			headerLogoWhite.style.display = 'block';
-			headerButtons.forEach((button) => {
-				button.style.color = 'white';
-				button.style.borderBottomColor = 'white';
-			});
-			break;
-		case 'contact':
-			mainContent.style.left = '-300vw';
-			headerLogoWhite.style.display = 'none';
-			headerLogoBlue.style.display = 'block';
-			headerButtons.forEach((button) => {
-				button.style.color = '#2a3840';
-				button.style.borderBottomColor = '#2a3840';
-			});
-			break;
-		case 'faq':
-			mainContent.style.left = '-400vw';
-			header.style.backgroundColor = 'transparent';
-			headerLogoBlue.style.display = 'none';
-			headerLogoWhite.style.display = 'block';
-			headerButtons.forEach((button) => {
-				button.style.color = 'white';
-				button.style.borderBottomColor = 'white';
-			});
-			break;
-	}
+//FIXME: WEIRD CHANGE OF CLASSNAME
+const moveMainContent = (section) => {
+	mainContent.className = `${
+		mainContent.className.split(' ')[0]
+	} main--${section}`;
 };
 
-homeRolldownButton.onclick = () => {
-	moveContent('about-me');
+const moveHeader = () => {
+	header.classList.toggle('header--down');
 };
+
+const changeHeaderColor = (color) => {
+	//FIXME: ACCESSING CLASS BY INDEX IS BAD
+	if (
+		(color === 'light' && headerLogos[0].classList[1]) ||
+		(color === 'dark' && headerLogos[1].classList[1])
+	)
+		return;
+
+	headerLogos.forEach((logo) => {
+		logo.classList.toggle('header__logo--inactive');
+	});
+	headerButtons.forEach((button) => {
+		button.classList.toggle('header__list-button--light');
+	});
+};
+
+const moveToHome = () => {
+	moveMainContent('home');
+};
+
+// FIXME: weird way to access button index 0
+const moveToAboutMe = () => {
+	moveMainContent('about-me');
+	changeHeaderColor('dark');
+	handleActiveClass(headerButtons[0]);
+};
+
+const moveToMyServices = () => {
+	moveMainContent('my-services');
+	changeHeaderColor('light');
+};
+
+const moveToContact = () => {
+	moveMainContent('contact');
+	changeHeaderColor('dark');
+};
+
+const moveToFaq = () => {
+	moveMainContent('faq');
+	changeHeaderColor('light');
+};
+
+const moveContent = {
+	toHome: () => moveToHome(),
+	toAboutMe: () => moveToAboutMe(),
+	toMyServices: () => moveToMyServices(),
+	toContact: () => moveToContact(),
+	toFaq: () => moveToFaq(),
+};
+
+const moveFromHomeToAboutMe = () => {
+	moveHeader();
+	moveContent['toAboutMe']();
+};
+
+homeRollDownButton.addEventListener('click', () => {
+	moveFromHomeToAboutMe();
+});
 
 headerButtons.forEach((button) => {
-	button.onclick = () => {
-		moveContent(button.id);
+	button.addEventListener('click', () => {
+		moveContent[button.dataset.headerbutton]();
 		handleActiveClass(button);
-	};
+	});
+});
+
+// FIXME: weird way to access button index 2
+contactButton.addEventListener('click', () => {
+	moveContent['toContact']();
+	handleActiveClass(headerButtons[2]);
 });
 
 headerLogos.forEach((logo) => {
-	logo.onclick = () => {
-		moveContent('home');
-	};
+	logo.addEventListener('click', () => {
+		moveHeader();
+		moveContent['toHome']();
+	});
+});
+
+faqQuestions.forEach((question) => {
+	question.addEventListener('click', () => {
+		faqQuestions.forEach((clickedQuestion) => {
+			if (question !== clickedQuestion) clickedQuestion.removeAttribute('open');
+		});
+	});
+});
+
+home.addEventListener('mousewheel', (event) => {
+	if (event.wheelDelta <= 0) moveFromHomeToAboutMe();
+});
+
+home.addEventListener('click', (event) => {
+	if (event.target.id !== 'video-button-home') {
+		homeVideoContainer.classList.remove('home__video-container--active');
+		const homeVideoSrc = homeVideo.src;
+		homeVideo.src = homeVideoSrc;
+	}
+});
+
+homeVideoButton.addEventListener('click', () => {
+	homeVideoContainer.classList.add('home__video-container--active');
+});
+
+myServicesVideoButton.addEventListener('click', () => {
+	myServicesVideoContainer.classList.add(
+		'my-services__video-container--active'
+	);
+});
+
+myServices.addEventListener('click', (event) => {
+	if (event.target.id !== 'video-button-my-services') {
+		myServicesVideoContainer.classList.remove(
+			'my-services__video-container--active'
+		);
+		const myServicesVideoSrc = myServicesVideo.src;
+		myServicesVideo.src = myServicesVideoSrc;
+	}
 });
