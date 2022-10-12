@@ -10,11 +10,15 @@ const headerButtons = document.querySelectorAll('[data-headerbutton]');
 const contactButton = document.querySelector('[data-contactbutton]');
 const faqQuestions = document.querySelectorAll('.faq__question');
 const homeVideoButton = document.querySelector('.home__video-button');
-const homeVideo = document.querySelector('.home__video-container');
+const homeVideoContainer = document.querySelector('.home__video-container');
+const homeVideo = document.querySelector('.home__video');
 const myServicesVideoButton = document.querySelector(
 	'.my-services__video-button'
 );
-const myServicesVideo = document.querySelector('.my-services__video-container');
+const myServicesVideoContainer = document.querySelector(
+	'.my-services__video-container'
+);
+const myServicesVideo = document.querySelector('.my-services__video');
 
 const handleActiveClass = (element) => {
 	headerButtons.forEach((button) => {
@@ -93,15 +97,6 @@ homeRollDownButton.addEventListener('click', () => {
 	moveFromHomeToAboutMe();
 });
 
-home.addEventListener('mousewheel', (event) => {
-	if (event.wheelDelta <= 0) moveFromHomeToAboutMe();
-});
-
-home.addEventListener('click', (event) => {
-	if (event.target.id !== 'video-button-home')
-		homeVideo.classList.remove('home__video-container--active');
-});
-
 headerButtons.forEach((button) => {
 	button.addEventListener('click', () => {
 		moveContent[button.dataset.headerbutton]();
@@ -130,15 +125,34 @@ faqQuestions.forEach((question) => {
 	});
 });
 
+home.addEventListener('mousewheel', (event) => {
+	if (event.wheelDelta <= 0) moveFromHomeToAboutMe();
+});
+
+home.addEventListener('click', (event) => {
+	if (event.target.id !== 'video-button-home') {
+		homeVideoContainer.classList.remove('home__video-container--active');
+		const homeVideoSrc = homeVideo.src;
+		homeVideo.src = homeVideoSrc;
+	}
+});
+
 homeVideoButton.addEventListener('click', () => {
-	homeVideo.classList.add('home__video-container--active');
+	homeVideoContainer.classList.add('home__video-container--active');
 });
 
 myServicesVideoButton.addEventListener('click', () => {
-	myServicesVideo.classList.add('my-services__video-container--active');
+	myServicesVideoContainer.classList.add(
+		'my-services__video-container--active'
+	);
 });
 
 myServices.addEventListener('click', (event) => {
-	if (event.target.id !== 'video-button-my-services')
-		myServicesVideo.classList.remove('my-services__video-container--active');
+	if (event.target.id !== 'video-button-my-services') {
+		myServicesVideoContainer.classList.remove(
+			'my-services__video-container--active'
+		);
+		const myServicesVideoSrc = myServicesVideo.src;
+		myServicesVideo.src = myServicesVideoSrc;
+	}
 });
