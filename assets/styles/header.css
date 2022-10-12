@@ -56,3 +56,9 @@
 .active {
 	border-bottom: 1px solid;
 }
+
+@media screen and (max-width: 1200px) {
+	.header {
+		display: none;
+	}
+}
