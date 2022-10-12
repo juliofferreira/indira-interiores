@@ -78,13 +78,13 @@ body {
 
 @media screen and (max-width: 1700) {
 	html {
-		font-size: 14px;
+		font-size: 13px;
 	}
 }
 
 @media screen and (max-width: 1500px) {
 	html {
-		font-size: 13px;
+		font-size: 12.5px;
 	}
 }
 
