@@ -82,9 +82,15 @@ body {
 	}
 }
 
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 1400px) {
 	html {
 		font-size: 11.5px;
+	}
+}
+
+@media screen and (max-width: 1300) {
+	html {
+		font-size: 10.5px;
 	}
 }
 
