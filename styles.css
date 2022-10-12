@@ -83,4 +83,30 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
+	html {
+		overflow: scroll;
+		height: auto;
+	}
+
+	.main {
+		flex-direction: column;
+		height: 500vh;
+		width: 100vw;
+	}
+
+	.main--about-me {
+		left: 0vw;
+	}
+
+	.main--my-services {
+		left: 0vw;
+	}
+
+	.main--contact {
+		left: 0vw;
+	}
+
+	.main--faq {
+		left: 0vw;
+	}
 }

@@ -35,7 +35,11 @@ const moveMainContent = (section) => {
 };
 
 const moveHeader = () => {
-	header.classList.toggle('header--down');
+	if (header.classList.contains('header--down')) {
+		header.classList.remove('header--down');
+	} else {
+		header.classList.add('header--down');
+	}
 };
 
 const changeHeaderColor = (color) => {
