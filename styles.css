@@ -32,7 +32,7 @@
 }
 
 html {
-	font-size: 14px;
+	font-size: 12px;
 	overflow: hidden;
 	width: 100vw;
 	height: 100%;
@@ -76,7 +76,7 @@ body {
 	left: -400vw;
 }
 
-@media screen and (max-width: 1700) {
+/* @media screen and (max-width: 1700) {
 	html {
 		font-size: 13px;
 	}
@@ -98,7 +98,7 @@ body {
 	html {
 		font-size: 10.5px;
 	}
-}
+} */
 
 @media screen and (max-width: 1200px) {
 	html {
