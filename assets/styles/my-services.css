@@ -99,12 +99,12 @@
 
 .my-services__image-architecture {
 	background: url('../img/architecture.svg') no-repeat center;
-	height: 100px;
-	width: 100px;
+	height: var(--100px);
+	width: var(--100px);
 }
 
 .my-services__image-feng-shui {
 	background: url('../img/balance.svg') no-repeat center;
-	height: 100px;
-	width: 100px;
+	height: var(--100px);
+	width: var(--100px);
 }

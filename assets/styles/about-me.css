@@ -66,6 +66,6 @@
 
 .about-me__image {
 	background: url('../img/eye.svg') no-repeat center;
-	height: 65px;
-	width: 100px;
+	height: var(--65px);
+	width: var(--100px);
 }
